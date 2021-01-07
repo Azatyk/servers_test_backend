@@ -6,12 +6,20 @@ app.use(cors());
 
 const mysql = require("mysql");
 
+// const db = mysql.createConnection({
+//   user: "doadmin",
+//   host: "server-test-database-do-user-8396420-0.b.db.ondigitalocean.com",
+//   password: "hxgxim581dbcmvkh",
+//   database: "server-test-database",
+//   port: "25060",
+// });
+
 const db = mysql.createConnection({
-  user: "doadmin",
-  host: "server-test-database-do-user-8396420-0.b.db.ondigitalocean.com",
-  password: "hxgxim581dbcmvkh",
-  database: "server-test-database",
-  port: "25060",
+  user: "root",
+  host: "localhost",
+  password: "",
+  database: "servers_test_db",
+  // port: "",
 });
 
 app.get("/select", (req, res) => {
