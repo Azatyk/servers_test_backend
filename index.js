@@ -22,6 +22,10 @@ const db = mysql.createConnection({
   // port: "",
 });
 
+app.get("/", (req, res) => {
+  res.send("Yep, updates downloaded c:");
+});
+
 app.get("/select", (req, res) => {
   db.query("SELECT * FROM cars", (err, result) => {
     if (err) {
