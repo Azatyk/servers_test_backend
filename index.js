@@ -10,7 +10,7 @@ const db = mysql.createConnection({
   user: "doadmin",
   host: "server-test-database-do-user-8396420-0.b.db.ondigitalocean.com",
   password: "roothxgxim581dbcmvkh",
-  database: "defaultdb",
+  database: "server-test-database",
   port: "25060",
 });
 
