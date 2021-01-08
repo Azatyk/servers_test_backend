@@ -14,6 +14,12 @@ const db = mysql.createConnection({
   port: "25060",
 });
 
+db.connect((err) => {
+  if (err) {
+    console.log(err);
+  }
+});
+
 app.get("/select", (req, res) => {
   db.query("SELECT * FROM cars", (err, result) => {
     if (err) {
@@ -34,6 +40,8 @@ app.get("/insert/:carName", (req, res) => {
     res.send(result);
   });
 });
+
+db.end();
 
 app.listen(3001, () => {
   console.log("Server running on port 3001...");
