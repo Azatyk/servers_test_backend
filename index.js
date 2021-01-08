@@ -7,9 +7,9 @@ app.use(cors());
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-  user: "doadmin",
+  user: "azatuk",
   host: "server-test-database-do-user-8396420-0.b.db.ondigitalocean.com",
-  password: "hxgxim581dbcmvkh",
+  password: "jqv0t5o87um70wzu",
   database: "server-test-database",
   port: "25060",
 });
