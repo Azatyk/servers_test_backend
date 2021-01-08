@@ -9,15 +9,9 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
   user: "azatuk",
   host: "server-test-database-do-user-8396420-0.b.db.ondigitalocean.com",
-  password: "jqv0t5o87um70wzu",
+  password: "Banana1627",
   database: "server-test-database",
   port: "25060",
-});
-
-db.connect((err) => {
-  if (err) {
-    console.log(err);
-  }
 });
 
 app.get("/select", (req, res) => {
@@ -40,8 +34,6 @@ app.get("/insert/:carName", (req, res) => {
     res.send(result);
   });
 });
-
-db.end();
 
 app.listen(3001, () => {
   console.log("Server running on port 3001...");
